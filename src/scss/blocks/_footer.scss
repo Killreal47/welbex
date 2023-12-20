@@ -1,0 +1,119 @@
+.footer {
+	padding: 0 15px;
+	padding-top: 55px;
+	margin-top: 69px;
+	font-size: 32px;
+	background-color: $bgColor;
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+
+	&__middle-side {
+		.ul-container {
+			display: grid;
+			gap: 50px;
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	&__right-side {
+		text-align: right;
+		max-width: 277px;
+		.footer__block {
+			margin-top: -15px;
+		}
+		.footer__tel {
+			color: var(--light-text, #e4e5ea);
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 16px;
+		}
+		.footer__contacts {
+			margin-top: 21px;
+		}
+
+		.footer__contacts-link {
+			margin-left: 10px;
+			margin-bottom: 20px;
+			line-height: 10px;
+		}
+		.footer__adres {
+			color: var(--light-text, #e4e5ea);
+			font-family: Inter;
+			font-size: 16px;
+			font-weight: 400;
+		}
+
+		.copyright {
+			margin-top: 70px;
+			.footer__copy {
+				display: block;
+				margin-bottom: -15px;
+				color: var(--light-text, #e4e5ea);
+				font-family: Montserrat;
+				font-size: 12px;
+				font-weight: 400;
+			}
+			.footer__copy-link {
+				display: block;
+				margin-top: 20px;
+				color: var(--light-text, #e4e5ea);
+				font-family: Montserrat;
+				font-size: 12px;
+				font-weight: 400;
+				text-decoration-line: underline;
+			}
+		}
+	}
+	.footer__title {
+		font-weight: 700;
+		letter-spacing: 0.7px;
+		text-transform: uppercase;
+		color: var(--dark-gray, #656566);
+		font-size: 14px;
+		margin-bottom: 20px;
+	}
+	.footer__item {
+		color: var(--light-text, #e4e5ea);
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+}
+
+@media (max-width: $breakpoint768) {
+	.footer-wrapper{
+		background: var(--black, #0E1014);
+	}
+	.footer {
+		display: block;
+		margin-top: 60px;
+		padding: 45px 15px 0 15px;
+		
+		&__left-side {
+			margin-bottom: 30px;
+		}
+		&__middle-side {
+			margin-bottom: 30px;
+		}
+		&__right-side {
+			text-align: left;
+
+			.footer__contacts {
+				margin-top: 8px;
+				&-link {
+					img {
+						width: 24px;
+						height: 24px;
+					}
+					&:first-child {
+						margin-left: 0;
+					}
+				}
+			}
+
+			.copyright {
+				margin-top: 50px;
+				margin-bottom: 60px;
+			}
+		}
+	}
+}
